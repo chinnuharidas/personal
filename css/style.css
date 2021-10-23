@@ -770,6 +770,13 @@ a:focus {
     transition: .3s;
 }
 
+.service .service-icon img {
+    max-height: 5em;
+    max-width: 8em;
+    color: #EF233C;
+    transition: .3s;
+}
+
 .service .service-item:hover i {
     font-size: 75px;
 }
