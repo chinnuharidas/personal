@@ -534,6 +534,7 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 
 
         <script src="lib/easing/easing.min.js"></script>
@@ -543,35 +544,10 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <!-- <script src="mail/contact.js"></script> -->
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
-
-        <script>
-        $("#contactForm").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycby1JqC0-00CL81154U04K7-WY-Pm3ufOiJy0_DZxftVXBhz8-T2HZq44Bq6Oh8Mt00leA/exec",
-                data:$("#contactForm").serialize(),
-                method:"post",
-                success:function (response){
-                    alert("Form submitted successfully")
-                    $("#contactForm")[0].reset();
-                    window.location.reload();
-                },
-                error:function (err){
-                    alert("Something Error")
-    
-                }
-            })
-        })
-        </script>
-
-
+        <script src="js/formvalid.js"></script>
 
     </body>
 </html>
