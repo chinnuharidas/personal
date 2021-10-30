@@ -24,22 +24,34 @@ function validateContactForm(){
                 required: true,
                 minlength: 5,
                 maxlength: 30,
-                lettersonly: true
+                lettersonly: true,
+                normalizer: function(value) {
+                    return $.trim(value);
+                }
             },
             email:{
                 required: true,
                 email: true,
-                minlength: 5
+                minlength: 5,
+                normalizer: function(value) {
+                    return $.trim(value);
+                }
             },
             subject:{
                 required: true,
                 minlength: 5,
-                maxlength: 30
+                maxlength: 30,
+                normalizer: function(value) {
+                    return $.trim(value);
+                }
             },
             message:{
                 required: true,
                 minlength: 8,
-                maxlength: 30
+                maxlength: 30,
+                normalizer: function(value) {
+                    return $.trim(value);
+                }
             }
         }
     })
